@@ -99,9 +99,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cnBlogs\cnBlogs.csproj">
+    <ProjectReference Include="..\cnBlogs\cnBlogs.Mvc.csproj">
       <Project>{D7EBAD94-261B-4FD9-8034-0D2F3B438219}</Project>
-      <Name>cnBlogs</Name>
+      <Name>cnBlogs.Mvc</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

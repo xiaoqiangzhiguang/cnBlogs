@@ -1,0 +1,40 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Data" #>
+<#@ output extension=".cs" encoding="utf-8" #>
+<#@ include file="$(ProjectDir)DbHelper.ttinclude" #>
+<#  string database = "cnBlogs";
+	string tableName = "Blog";
+	string suffix = "Entity";
+	string connectString = "data source=DESKTOP-VDJRNNR; initial catalog=cnBlogs;Uid=sa;pwd=123456";
+	#>
+using  System;
+namespace Repositories
+{
+	public class <#=tableName#><#=suffix#>
+	{
+		public <#=tableName#><#=suffix#>()
+		{
+			<# foreach(var current in DbHelper.GetColumns(database,tableName,connectString) ) {
+			var defaultVal = MapColumnTypeToCSharpType.MapDefaultVal(current.CSharpType,current.DefaultVal);
+			if (null != defaultVal)
+			{
+			#>
+	<#= current.ColumnName#> = <#=defaultVal#>;
+		<#}}#>
+}
+		<# foreach(var current in DbHelper.GetColumns(database,tableName,connectString)) { #>
+/// <summary>
+		/// <#=current.ColumnDesc#>
+		/// </summary>
+		public <#= current.CSharpType#> <#= current.ColumnName#> { get;set;}
+		<#}#>
+
+	}
+}
+

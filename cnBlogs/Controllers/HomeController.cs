@@ -26,5 +26,11 @@ namespace cnBlogs.Controllers
 
             return View();
         }
+
+        protected override void OnException(ExceptionContext filterContext)
+        {
+            base.OnException(filterContext);
+            filterContext.ExceptionHandled = true;
+        }
     }
 }

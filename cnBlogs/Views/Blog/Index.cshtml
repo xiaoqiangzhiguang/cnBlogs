@@ -1,0 +1,36 @@
+﻿@using Repositories.Blogs;
+@model IEnumerable<Blog>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>标题</th>
+                <th>内容</th>
+                <th>作者</th>
+                <th>发布时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var current in Model)
+            {
+                <tr>
+                    <td>@current.Title</td>
+                    <td>@current.Content</td>
+                    <td>@current.Author</td>
+                    <td>@current.CreateTime.ToString("yyyy-MM-dd hh:mm:ss")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
