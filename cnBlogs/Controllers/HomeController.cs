@@ -1,6 +1,8 @@
-﻿using System;
+﻿using cnBlogs.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
@@ -12,6 +14,7 @@ namespace cnBlogs.Controllers
         {
             return View();
         }
+
 
         public ActionResult About()
         {
@@ -32,5 +35,6 @@ namespace cnBlogs.Controllers
             base.OnException(filterContext);
             filterContext.ExceptionHandled = true;
         }
+
     }
 }

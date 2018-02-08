@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cnBlogs.Services", "cnBlogs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{C2ADD8D0-3AA6-45E0-8D7C-87D18496F5D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cnBlogs.Core", "ClassLibrary1\cnBlogs.Core.csproj", "{5AF37508-ACB9-4071-9166-D1E607BEFDAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C2ADD8D0-3AA6-45E0-8D7C-87D18496F5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2ADD8D0-3AA6-45E0-8D7C-87D18496F5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2ADD8D0-3AA6-45E0-8D7C-87D18496F5D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AF37508-ACB9-4071-9166-D1E607BEFDAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AF37508-ACB9-4071-9166-D1E607BEFDAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AF37508-ACB9-4071-9166-D1E607BEFDAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AF37508-ACB9-4071-9166-D1E607BEFDAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
